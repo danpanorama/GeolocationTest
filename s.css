@@ -1,0 +1,9 @@
+.displaynone {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.displayblock {
+  opacity: 1;
+  visibility: visible;
+}

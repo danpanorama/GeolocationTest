@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                console.log(position.coords.latitude, position.coords.longitude)
+  do_something(position.coords.latitude, position.coords.longitude);
+
+});
+var watchID = navigator.geolocation.watchPosition(function(position) {
+  do_something2(position.coords.latitude, position.coords.longitude);
+});
+} else {
+ 
+}
+function do_something(a,b){
+    console.log(a,b)
+    let p =document.createElement('p')
+    p.innerText += a+' '+b +'\n'
+    document.getElementById('res').appendChild(p)
+
+}
+function do_something2(a,b){
+    console.log(a,b)
+
+}
+    </script>
+</head>
+<body>
+    32.0831488 34.7734016
+
+    <p id="res"></p>
+</body>
+</html>
